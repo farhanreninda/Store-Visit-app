@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    tools:context=".menu.HomeMenuActivity">
+
+    <RelativeLayout
+        android:id="@+id/layout_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_white"
+        android:elevation="1dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/image_profile"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginBottom="20dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="10dp">
+
+            <ImageView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:contentDescription="@string/imageview"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_profile" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_nama_lengkap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image_profile"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/inter_semi_bold"
+            android:text="@string/admin"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_nama_lengkap"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="48dp"
+            android:fontFamily="@font/inter_regular"
+            android:letterSpacing="-0.03"
+            android:text="@string/nik_212159"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/item_kunjungan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_profile"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:clickable="true"
+        android:elevation="2dp"
+        android:focusable="true"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_kunjungan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/inter_semi_bold"
+                android:text="@string/kunjungan_pada_bulan_januari_2023"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_kunjungan"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                tools:ignore="UselessParent">
+
+                <ImageView
+                    android:id="@+id/iv_warning"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:contentDescription="@string/imageview"
+                    android:src="@drawable/warning" />
+
+                <TextView
+                    android:id="@+id/tv_total_store"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@id/iv_warning"
+                    android:fontFamily="@font/inter_medium"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_warning"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="@string/total_score"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_kunjungan"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                tools:ignore="UselessParent">
+
+                <ImageView
+                    android:id="@+id/iv_check"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:contentDescription="@string/imageview"
+                    android:src="@drawable/check" />
+
+                <TextView
+                    android:id="@+id/tv_actual_store"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@id/iv_check"
+                    android:fontFamily="@font/inter_medium"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_check"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="2dp"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="@string/actual_score"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_kunjungan"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                tools:ignore="UselessParent">
+
+                <ImageView
+                    android:id="@+id/iv_percen"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:contentDescription="@string/imageview"
+                    android:src="@drawable/persentage" />
+
+                <TextView
+                    android:id="@+id/tv_percen_store"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@id/iv_percen"
+                    android:fontFamily="@font/inter_medium"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_percen"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="2dp"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="@string/percentage"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/item_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_kunjungan"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="20dp"
+        android:clickable="true"
+        android:elevation="2dp"
+        android:focusable="true"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/inter_semi_bold"
+                android:text="@string/menu"
+                android:textColor="#E9AD21"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:id="@+id/kunjungan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_menu"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                tools:ignore="UselessParent">
+
+                <ImageView
+                    android:id="@+id/iv_kunjungan"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@string/imageview"
+                    android:src="@drawable/kunjungan" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_kunjungan"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="@string/kunjungan"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_menu"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_toEndOf="@id/kunjungan"
+                tools:ignore="UselessParent">
+
+                <ImageView
+                    android:id="@+id/iv_cdf"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@string/imageview"
+                    android:src="@drawable/cdf" />
+
+                <TextView
+                    android:id="@+id/tv_target"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_cdf"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="@string/target_install"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_target"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="@string/cdfdpc"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_menu"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_toStartOf="@+id/history"
+                tools:ignore="UselessParent">
+
+                <ImageView
+                    android:id="@+id/iv_dashboard"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@string/imageview"
+                    android:src="@drawable/dashboard" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_dashboard"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="@string/dashboard"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/history"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_menu"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                tools:ignore="UselessParent">
+
+                <ImageView
+                    android:id="@+id/iv_history"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@string/imageview"
+                    android:src="@drawable/history" />
+
+                <TextView
+                    android:id="@+id/tv_trans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_history"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="@string/transmission"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_trans"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="@string/history"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/kunjungan"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                tools:ignore="UselessParent">
+
+                <ImageView
+                    android:id="@+id/iv_logout"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@string/imageview"
+                    android:src="@drawable/logout" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_logout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="@string/logout"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
